@@ -758,13 +758,13 @@ QString BuiltinWalletd::errorMessage(ReturnCode err)
         msg = tr("Database write error. Disk is full or database is corrupted.");
         break;
     case ReturnCode::BYTECOIND_ALREADY_RUNNING:
-        msg = tr("Cannot run bytecoind. Another instance of bytecoind is running.");
+        msg = tr("Cannot run zeleriusd. Another instance of zeleriusd is running.");
         break;
     case ReturnCode::WALLETD_BIND_PORT_IN_USE:
         msg = tr("Cannot run walletd. Walletd bind port in use.");
         break;
     case ReturnCode::BYTECOIND_BIND_PORT_IN_USE:
-        msg = tr("Cannot run bytecoind. Bytecoind bind port in use.");
+        msg = tr("Cannot run zeleriusd. Zeleriusd bind port in use.");
         break;
     case ReturnCode::WALLET_FILE_READ_ERROR:
         msg = tr("Cannot read the specified wallet file.");

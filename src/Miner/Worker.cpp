@@ -15,7 +15,8 @@ namespace  {
     _localJob.blob.replace(39, sizeof(_localNonce), reinterpret_cast<char*>(&_localNonce), sizeof(_localNonce));
     std::memset(&_hash, 0, sizeof(_hash));
     //_hash = _context.cn_slow_hash(_localJob.blob.data(), _localJob.blob.size());
-    _hash = _context.cn_slow_hash_v1(_localJob.blob.data(), _localJob.blob.size());
+    //_hash = _context.cn_slow_hash_v1(_localJob.blob.data(), _localJob.blob.size());
+    _hash = _context.cn_slow_hash(_localJob.blob.data(), static_cast<size_t>(_localJob.blob.size()), 2);
   }
 }
 
