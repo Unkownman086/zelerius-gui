@@ -15,7 +15,7 @@ TEMPLATE = app
 macx: QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.13
 macx: ICON = images/zelerius.icns
 win32: RC_ICONS = images/zelerius.ico
-win32: VERSION = 1.2.1.0
+win32: VERSION = 1.3.0.0
 
 #QMAKE_CXXFLAGS += -fno-omit-frame-pointer -fsanitize=address,undefined
 #LIBS += -lasan -lubsan
@@ -23,8 +23,10 @@ win32: VERSION = 1.2.1.0
 CONFIG += c++14 strict_c++ no-opengl #static
 
 win32 {
-#QMAKE_CXXFLAGS_RELEASE += /MT
-#QMAKE_CFLAGS_RELEASE += /MT
+    #QMAKE_CXXFLAGS_RELEASE += /MT
+    #QMAKE_CFLAGS_RELEASE += /MT
+    msvc:LIBS += Advapi32.lib
+    gcc:LIBS += -lAdvapi32
 }
 
 DESTDIR = $$PWD/../bin

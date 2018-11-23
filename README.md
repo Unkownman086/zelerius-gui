@@ -1,5 +1,13 @@
 # zelerius-gui
 
+## About
+
+Welcome to the repository of zelerius gui wallet. Here you will find source code, instructions, wiki resources, and integration tutorials.
+
+## IMPORTANT
+
+**Development branch** is used for active development and can be either unstable or incompatible with release software so **DO NOT USE IT!**
+
 ## How to build binaries from source code
 
 ### Windows
