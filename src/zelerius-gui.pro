@@ -23,8 +23,10 @@ win32: VERSION = 1.3.0.0
 CONFIG += c++14 strict_c++ no-opengl #static
 
 win32 {
-#QMAKE_CXXFLAGS_RELEASE += /MT
-#QMAKE_CFLAGS_RELEASE += /MT
+    #QMAKE_CXXFLAGS_RELEASE += /MT
+    #QMAKE_CFLAGS_RELEASE += /MT
+    msvc:LIBS += Advapi32.lib
+    gcc:LIBS += -lAdvapi32
 }
 
 DESTDIR = $$PWD/../bin
