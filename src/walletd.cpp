@@ -779,7 +779,7 @@ QString BuiltinWalletd::errorMessage(ReturnCode err)
         msg = tr("Cannot write to the wallet file. Probably your file system is read only.");
         break;
     case ReturnCode::WALLET_FILE_EXISTS:
-        msg = tr("The specified wallet file already exists. Bytecoin wallet could not overwrite an existed file for safety reason. If you want to overwrite the file please remove it manually and try again.");
+        msg = tr("The specified wallet file already exists. Zelerius wallet could not overwrite an existed file for safety reason. If you want to overwrite the file please remove it manually and try again.");
         break;
     case ReturnCode::WALLET_WITH_THE_SAME_VIEWKEY_IN_USE:
         msg = tr("Another walletd instance is using the specified wallet file or another wallet file with the same view key.");
