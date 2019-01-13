@@ -12,7 +12,7 @@ TARGET = zelerius-gui
 TEMPLATE = app
 
 !win32: QMAKE_CXXFLAGS += -std=c++14 -Wall -Wextra
-macx: QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.14
+macx: QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.15
 macx: ICON = images/zelerius.icns
 win32: RC_ICONS = images/zelerius.ico
 win32: VERSION = 1.3.1.0
