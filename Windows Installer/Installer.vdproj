@@ -1477,9 +1477,9 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Zelerius Network"
-        "ProductCode" = "8:{35CB8158-43F6-4D1A-9C82-041BF7224483}"
-        "PackageCode" = "8:{AC45F8B2-7452-4841-8C49-2F8385E20850}"
-        "UpgradeCode" = "8:{3AEEAD6B-DEFC-4197-80BF-DBCECC317B6D}"
+        "ProductCode" = "8:{A5CD7A4B-F2FF-4924-8627-64B6030CED89}"
+        "PackageCode" = "8:{553094F9-FDAF-419D-AB2B-29D3A9000ED5}"
+        "UpgradeCode" = "8:{AF69D296-2F14-4F99-AFE9-2C4B73230FF8}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
@@ -1614,7 +1614,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_99D2372F91FF458A9B6D982EE866F189"
             {
-            "Name" = "8:Wallet (GUI)"
+            "Name" = "8:Zelerius Wallet"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
