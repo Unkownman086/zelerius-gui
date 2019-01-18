@@ -1,5 +1,9 @@
 ## Release Notes
 
+### v1.3.1
+
+- Mining always in CNv2
+
 ### v1.3.0
 
 - Updated for CN Variant 2 - height 265000 ~ 15/dec/2018
