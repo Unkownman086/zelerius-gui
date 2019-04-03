@@ -1,5 +1,11 @@
 ## Release Notes
 
+### v1.4.1
+- Mining always in CNvZLS
+
+### v1.4.0
+- Hard Fork - Updated for CN Variant ZLS
+
 ### v1.3.1
 
 - Mining always in CNv2
