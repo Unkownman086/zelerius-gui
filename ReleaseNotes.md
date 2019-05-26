@@ -2,6 +2,8 @@
 
 ### v1.4.1
 - Mining always in CNvZLS
+- Added substract fee from amount option
+- Added get_all_logs option (disabled by default)
 
 ### v1.4.0
 - Hard Fork - Updated for CN Variant ZLS

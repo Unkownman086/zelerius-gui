@@ -64,10 +64,11 @@ private:
     Q_SLOT void feeValueChanged(int value);
     Q_SLOT void validatePaymentId(const QString& paymentId);
     Q_SLOT void updateFee(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
+    Q_SLOT void subFeeFromAmount(bool sub);
 
 Q_SIGNALS:
     void showTransactionsFrameSignal();
-    void createTxSignal(const RpcApi::Transaction& tx, quint64 fee);
+    void createTxSignal(const RpcApi::Transaction& tx, quint64 fee, bool sub_fee_from_amount);
 };
 
 }

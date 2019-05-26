@@ -68,6 +68,7 @@ MainWindow::MainWindow(
     , copiedToolTip_(new CopiedToolTip(this))
     , walletModel_(walletModel)
 {
+
     m_ui->setupUi(this);
 
     m_ui->m_updateLabel->setText("");
@@ -147,6 +148,8 @@ MainWindow::MainWindow(
 
     m_ui->m_logButton->setChecked(true);
     m_ui->m_logFrame->show();
+
+    connect( m_ui->m_getAllLogs, SIGNAL(triggered(bool)), this, SLOT(get_all_logs(bool)));
 }
 
 MainWindow::~MainWindow()
@@ -158,13 +161,14 @@ QString MainWindow::getAddress() const
     return walletModel_->getAddress();
 }
 
+
 void MainWindow::addRecipient(const QString& address, const QString& label)
 {
     m_ui->m_sendFrame->addRecipient(address, label);
     m_ui->m_sendButton->click();
 }
 
-void MainWindow::createTx(const RpcApi::Transaction& tx, quint64 fee)
+void MainWindow::createTx(const RpcApi::Transaction& tx, quint64 fee, bool sub_fee_from_amount)
 {
     RpcApi::CreateTransaction::Request req;
     req.any_spend_address = true;
@@ -173,6 +177,7 @@ void MainWindow::createTx(const RpcApi::Transaction& tx, quint64 fee)
     req.confirmed_height_or_depth = -static_cast<qint32>(CONFIRMATIONS) - 1;
     req.fee_per_byte = fee;
     req.save_history = true;
+    req.subtract_fee_from_amount = sub_fee_from_amount;
 
     emit createTxSignal(req, QPrivateSignal{});
 }
@@ -429,12 +434,16 @@ void MainWindow::openDataFolder()
 
 void MainWindow::packetSent(const QByteArray& data)
 {
-    m_ui->m_logFrame->addNetworkMessage(QString("--> ") + QString::fromUtf8(data) + '\n');
+    if(all_logs) {
+        m_ui->m_logFrame->addNetworkMessage(QString("--> ") + QString::fromUtf8(data) + '\n');
+    }
 }
 
 void MainWindow::packetReceived(const QByteArray& data)
 {
-    m_ui->m_logFrame->addNetworkMessage(QString("<-- ") + QString::fromUtf8(data) + '\n');
+    if(all_logs) {
+        m_ui->m_logFrame->addNetworkMessage(QString("<-- ") + QString::fromUtf8(data) + '\n');
+    }
 }
 
 void MainWindow::createProof(const QString& txHash, bool needToFind)
@@ -468,6 +477,11 @@ void MainWindow::updateIsReady(const QString& newVersion)
     m_ui->m_updateLabel->setOpenExternalLinks(true);
     m_ui->m_updateLabel->setText(QString("New version %1 of Zelerius GUI wallet is available.").arg(QString("<a href=\"https://zelerius.org/downloads\">%1</a>").arg(newVersion)));
     m_ui->m_updateLabel->show();
+}
+
+void MainWindow::get_all_logs(bool checked)
+{
+    all_logs = checked;
 }
 
 }

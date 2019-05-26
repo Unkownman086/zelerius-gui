@@ -210,6 +210,11 @@ void SendFrame::cancelSend()
     m_ui->m_sendButton->setEnabled(readyToSend());
 }
 
+void SendFrame::subFeeFromAmount(bool sub)
+{
+
+}
+
 void SendFrame::sendClicked()
 {
 //    Q_ASSERT(m_mainWindow != nullptr);
@@ -252,8 +257,9 @@ void SendFrame::sendClicked()
     tx.payment_id = paymentId;
     tx.anonymity = m_ui->m_mixinSlider->value();
     tx.unlock_time = 0;
+    //tx.sub_fee_from_amount = m_ui->m_sub_fee_from_amount->isChecked();
 
-    emit createTxSignal(tx, getFeeFromSlider(m_ui->m_feeSlider->value()));
+    emit createTxSignal(tx, getFeeFromSlider(m_ui->m_feeSlider->value()), m_ui->m_sub_fee_from_amount->isChecked());
 }
 
 void SendFrame::mixinValueChanged(int value)

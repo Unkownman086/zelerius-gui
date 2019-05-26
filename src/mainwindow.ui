@@ -739,6 +739,7 @@
     <addaction name="m_checkProofAction"/>
     <addaction name="m_openDataFolderAction"/>
     <addaction name="m_paramsAction"/>
+    <addaction name="m_getAllLogs"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuTools"/>
@@ -842,6 +843,17 @@
   <action name="m_exportKeysAction">
    <property name="text">
     <string>Ex&amp;port keys</string>
+   </property>
+  </action>
+  <action name="m_getAllLogs">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Get All Logs</string>
    </property>
   </action>
  </widget>
