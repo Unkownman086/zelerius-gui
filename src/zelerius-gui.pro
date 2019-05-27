@@ -15,7 +15,7 @@ TEMPLATE = app
 macx: QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.14
 macx: ICON = images/zelerius.icns
 win32: RC_ICONS = images/zelerius.ico
-win32: VERSION = 1.4.0.0
+win32: VERSION = 1.4.1.0
 
 #QMAKE_CXXFLAGS += -fno-omit-frame-pointer -fsanitize=address,undefined
 #LIBS += -lasan -lubsan

@@ -13,7 +13,7 @@ namespace WalletGUI {
 namespace  {
   void miningRound(Job& _localJob, quint32& _localNonce, crypto::Hash& _hash, crypto::CryptoNightContext& _context)
   {
-      uint8_t major_version = 0x07;
+      uint8_t major_version = 0x00; //0x07;
 
       _localJob.blob.replace(39, sizeof(_localNonce), reinterpret_cast<char*>(&_localNonce), sizeof(_localNonce));
       std::memset(&_hash, 0, sizeof(_hash));

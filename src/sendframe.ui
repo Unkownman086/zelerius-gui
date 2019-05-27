@@ -70,7 +70,7 @@
         <x>0</x>
         <y>0</y>
         <width>654</width>
-        <height>68</height>
+        <height>72</height>
        </rect>
       </property>
       <property name="sizePolicy">
@@ -319,45 +319,12 @@
       <property name="bottomMargin">
        <number>23</number>
       </property>
-      <item row="0" column="2" rowspan="2">
-       <widget class="QLabel" name="label">
+      <item row="0" column="0">
+       <widget class="QLabel" name="m_mixinTextLabel">
         <property name="text">
-         <string/>
+         <string>Anonymity level</string>
         </property>
        </widget>
-      </item>
-      <item row="0" column="5" rowspan="2">
-       <widget class="QLabel" name="m_totalAmountLabel">
-        <property name="text">
-         <string>amount</string>
-        </property>
-        <property name="indent">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QSpinBox" name="m_mixinSpin">
-        <property name="maximum">
-         <number>999999999</number>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="3" rowspan="2">
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>298</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
       </item>
       <item row="1" column="0" colspan="2">
        <widget class="QSlider" name="m_mixinSlider">
@@ -383,6 +350,62 @@
          <enum>Qt::Horizontal</enum>
         </property>
        </widget>
+      </item>
+      <item row="0" column="6" rowspan="2">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>10</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="m_mixinSpin">
+        <property name="maximum">
+         <number>999999999</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4" rowspan="2">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Total amount</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5" rowspan="2">
+       <widget class="QLabel" name="m_totalAmountLabel">
+        <property name="text">
+         <string>amount</string>
+        </property>
+        <property name="indent">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" rowspan="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>298</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
       </item>
       <item row="0" column="7" rowspan="2">
        <widget class="QPushButton" name="m_sendButton">
@@ -412,35 +435,25 @@
         </property>
        </widget>
       </item>
-      <item row="0" column="4" rowspan="2">
-       <widget class="QLabel" name="label_2">
+      <item row="0" column="2" rowspan="2">
+       <widget class="QLabel" name="label">
         <property name="text">
-         <string>Total amount</string>
+         <string/>
         </property>
        </widget>
       </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="m_mixinTextLabel">
+      <item row="2" column="0" colspan="2">
+       <widget class="QCheckBox" name="m_sub_fee_from_amount">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
-         <string>Anonymity level</string>
+         <string>Subtract fee from amount</string>
         </property>
        </widget>
-      </item>
-      <item row="0" column="6" rowspan="2">
-       <spacer name="horizontalSpacer_4">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Fixed</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>10</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
       </item>
      </layout>
     </widget>

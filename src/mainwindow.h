@@ -54,7 +54,7 @@ public:
 
     Q_SLOT void jsonErrorResponse(const QString& id, const QString& errorString);
     Q_SLOT void createTxReceived(const RpcApi::CreatedTx& tx);
-    Q_SLOT void createTx(const RpcApi::Transaction& tx, quint64 fee);
+    Q_SLOT void createTx(const RpcApi::Transaction& tx, quint64 fee, bool sub_fee_from_amount);
 
     Q_SLOT void copiedToClipboard();
     Q_SLOT void openDataFolder();
@@ -114,6 +114,11 @@ private:
     Q_SLOT void createProof(const QString& txHash, bool needToFind);
     Q_SLOT void checkProof();
     Q_SLOT void showWalletdParams();
+
+    Q_SLOT void get_all_logs(bool checked);
+
+//settings
+    bool all_logs = false;
 
 signals:
     void createTxSignal(const RpcApi::CreateTransaction::Request& req, QPrivateSignal);
