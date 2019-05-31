@@ -35,7 +35,7 @@ constexpr char LOCAL_HOST[] = "127.0.0.1";
 constexpr char DEFAULT_WORK_DIR[] = ".zelerius";
 #endif
 
-const constexpr char* DEFAULT_MINING_POOLS[] = { "pool.zelerius.org:4000", "pool.zelerius.ru:3333", "zls.cryptohispano.net:3333" };
+const constexpr char* DEFAULT_MINING_POOLS[] = { "pool.zelerius.org:3333", "pool2.zelerius.org:4000" };
 
 static
 bool readJsonFile(QIODevice& device, QSettings::SettingsMap& map)
