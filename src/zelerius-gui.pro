@@ -15,7 +15,7 @@ TEMPLATE = app
 macx: QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.14
 macx: ICON = images/zelerius.icns
 win32: RC_ICONS = images/zelerius.ico
-win32: VERSION = 1.4.1.0
+win32: VERSION = 1.4.2.0
 
 #QMAKE_CXXFLAGS += -fno-omit-frame-pointer -fsanitize=address,undefined
 #LIBS += -lasan -lubsan
@@ -40,8 +40,8 @@ Release:BY_DST_PATH = $$shell_path($$clean_path("$$DESTDIR"))
 copywalletd.commands = $(COPY_FILE) $${WALLETD_BY_SRC_PATH} $${BY_DST_PATH}
 copyzeleriusd.commands = $(COPY_FILE) $${zeleriusD_BY_SRC_PATH} $${BY_DST_PATH}
 }else:macx {
-copywalletd.commands += $(COPY_FILE) $$PWD/../../Zelerius-Network/bin/walletd $$DESTDIR/zelerius-gui.app/Contents/MacOS
-copyzeleriusd.commands += $(COPY_FILE) $$PWD/../../Zelerius-Network/bin/zeleriusd $$DESTDIR/zelerius-gui.app/Contents/MacOS
+copywalletd.commands += $(COPY_FILE) $$PWD/../../Zelerius-Network/bin/walletd $$DESTDIR/zelerius-gui.app/Contents/MacOS/
+copyzeleriusd.commands += $(COPY_FILE) $$PWD/../../Zelerius-Network/bin/zeleriusd $$DESTDIR/zelerius-gui.app/Contents/MacOS/
 }else {
 copywalletd.commands += $(COPY_FILE) $$PWD/../../Zelerius-Network/bin/walletd $$DESTDIR
 copyzeleriusd.commands += $(COPY_FILE) $$PWD/../../Zelerius-Network/bin/zeleriusd $$DESTDIR

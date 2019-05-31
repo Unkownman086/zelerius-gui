@@ -1,5 +1,8 @@
 ## Release Notes
 
+### v1.4.2 [development]
+- Updated mining pool list
+
 ### v1.4.1
 - Mining always in CNvZLS
 - Added substract fee from amount option
